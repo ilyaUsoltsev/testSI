@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card mt-3">
+      <div class="card-header">
+        Счет
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Баланс: {{balance}}</h5>
+        <h5 class="card-title">Сумма счета: {{bill}}</h5>
+        <p class="card-text" *ngIf="!enough">Недостаточно средств</p>
+        <button class="btn btn-primary mr-3" [disabled]="!enough" (click)="onPay()">Оплатить</button>
+        <button (click)="onReject()" class="btn btn-danger">Отменить</button>
+      </div>
+    </div>
+</div>
